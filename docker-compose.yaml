@@ -1,0 +1,38 @@
+version: '3.9'
+
+services:
+  mongo:
+    container_name: mongo
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongo_volume:/data/db
+    environment:
+     - MONGO_INITDB_ROOT_USERNAME=kacpers
+     - MONGO_INITDB_ROOT_PASSWORD=vinted1234
+     - MONGO_INITDB_DATABASE=vinted
+  discord:
+    container_name: discord
+    build: 
+      context: discord/.
+    volumes:
+      - ./common:/data/common
+    command: sh -c "python3 dc.py"
+  #selenium:
+  #  container_name: selenium
+  #  image: selenium/standalone-chrome
+  #  shm_size: 2gb
+  #  ports:
+  #   - 4444:4444
+  #  restart: always
+  application:
+    container_name: application
+    build:
+      context: selenium/.
+    volumes:
+      - ./common:/data/common
+    command: sh -c "python3 selenium_scrap.py"
+    #depends_on:
+    #  - selenium
+

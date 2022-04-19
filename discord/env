@@ -1,0 +1,4 @@
+CHROME_DRIVER=/Users/kacperszczesny/fun/vinted/chromedriver_99
+DC_BOT_TOKEN=OTU1MjU1NzI1MTI1NDMxMjk3.YjfBOA.-KOxuUAdG3vq1eIR_r9HoC4LCOM
+#MONGO_CLIENT=mongodb+srv://admin:admin@cluster0.nigti.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+MONGO_CLIENT=mongodb://kacpers:vinted1234@mongo/vinted

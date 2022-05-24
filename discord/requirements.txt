@@ -1,5 +1,0 @@
-discord
-python-dotenv
-pymongo
-pymongo[srv]
-

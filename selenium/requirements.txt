@@ -1,6 +1,0 @@
-selenium
-python-dotenv
-pymongo
-pymongo[srv]
-requests
-pyvirtualdisplay
